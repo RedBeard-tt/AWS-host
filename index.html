@@ -3,28 +3,215 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name — Portfolio</title>
+  <title>Travis Tannery — Computer Scientist</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .hero-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 80px 0;
+    }
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .funny-cat {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+    .section-title {
+      color: #333;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .cat-fact {
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+  </style>
 </head>
 <body class="bg-light">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Your Name</a>
+    <a class="navbar-brand fw-bold" href="#">
+      <i class="fas fa-code me-2"></i>Travis Tannery
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#interests">Interests</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-<main class="container py-5">
-  <div class="row align-items-center">
-    <div class="col-md-4 text-center">
-      <img src="https://1drv.ms/i/c/de3bca633db36611/ERFmsz1jyjsggN4biQAAAAABC2B_q2Ya_UMtmu_m1zVOJA?e=DfbnSA" class="img-fluid rounded" alt="Travis Tannery">
-    </div>
-    <div class="col-md-8">
-      <h1 class="display-5">Welcome!</h1>
-      <p class="lead">This is my Bootstrap-powered site hosted on AWS Amplify.</p>
+<!-- Hero Section -->
+<section class="hero-section text-center">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" class="profile-img rounded-circle" alt="Travis Tannery">
+      </div>
+      <div class="col-md-8 text-md-start">
+        <h1 class="display-4 fw-bold mb-3">Hi, I'm Travis Tannery!</h1>
+        <p class="lead mb-4">24-year-old Computer Scientist at UNT</p>
+        <p class="fs-5">Passionate about technology, coding, and of course... cats! 🐱</p>
+        <div class="mt-4">
+          <span class="badge bg-light text-dark me-2 fs-6">Computer Science</span>
+          <span class="badge bg-light text-dark me-2 fs-6">UNT Student</span>
+          <span class="badge bg-light text-dark fs-6">Cat Enthusiast</span>
+        </div>
+      </div>
     </div>
   </div>
-</main>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="text-center section-title">About Me</h2>
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="card card-hover border-0 shadow-sm">
+          <div class="card-body p-4">
+            <p class="fs-5 mb-4">Hey there! I'm Travis, a 24-year-old computer science student at the University of North Texas. When I'm not buried in code or debugging mysterious errors, you'll probably find me studying algorithms, working on cool projects, or watching cat videos on YouTube.</p>
+            
+            <div class="row">
+              <div class="col-md-6">
+                <h5><i class="fas fa-graduation-cap text-primary me-2"></i>Education</h5>
+                <p>Currently pursuing Computer Science at UNT</p>
+              </div>
+              <div class="col-md-6">
+                <h5><i class="fas fa-birthday-cake text-primary me-2"></i>Age</h5>
+                <p>24 years young and ready to code!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Funny Cat Section -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center section-title">Meet My Spirit Animal 🐱</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=300&fit=crop" class="funny-cat mb-4" alt="Funny Cat">
+        <div class="cat-fact">
+          <h4><i class="fas fa-paw text-warning me-2"></i>Fun Cat Fact!</h4>
+          <p class="mb-0">Did you know that cats spend 70% of their lives sleeping? As a computer science student, I can relate! Sometimes debugging code feels like it takes 70% of my life too! 😴</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interests Section -->
+<section id="interests" class="py-5">
+  <div class="container">
+    <h2 class="text-center section-title">My Interests</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card card-hover h-100 border-0 shadow-sm">
+          <div class="card-body text-center p-4">
+            <i class="fas fa-laptop-code fa-3x text-primary mb-3"></i>
+            <h5>Computer Science</h5>
+            <p>Passionate about algorithms, data structures, and solving complex problems through code.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card card-hover h-100 border-0 shadow-sm">
+          <div class="card-body text-center p-4">
+            <i class="fas fa-university fa-3x text-success mb-3"></i>
+            <h5>UNT Pride</h5>
+            <p>Proud Mean Green student! Go Eagles! (Wait, that's not right... Go Mean Green!)</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card card-hover h-100 border-0 shadow-sm">
+          <div class="card-body text-center p-4">
+            <i class="fas fa-cat fa-3x text-warning mb-3"></i>
+            <h5>Cats</h5>
+            <p>Self-proclaimed cat enthusiast. They're basically tiny, fluffy debugging partners!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-primary text-white">
+  <div class="container">
+    <h2 class="text-center section-title text-white">Let's Connect!</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-6 text-center">
+        <p class="fs-5 mb-4">Want to chat about coding, cats, or just say hi? I'd love to hear from you!</p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="#" class="btn btn-light btn-lg">
+            <i class="fab fa-github me-2"></i>GitHub
+          </a>
+          <a href="#" class="btn btn-outline-light btn-lg">
+            <i class="fab fa-linkedin me-2"></i>LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <p class="mb-0">&copy; 2024 Travis Tannery. Made with ❤️, Bootstrap, and lots of cat videos.</p>
+    <p class="small mt-2">Hosted on AWS Amplify</p>
+  </div>
+</footer>
 
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
